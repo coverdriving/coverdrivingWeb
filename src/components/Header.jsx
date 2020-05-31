@@ -4,15 +4,20 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
 const Wrapper = styled.header`
-  -webkit-clip-path: polygon(100% 0, 0 0, 0 70%, 50% 100%, 100% 70%);
-  clip-path: polygon(100% 0, 0 0, 0 70%, 50% 100%, 100% 70%);
+  // @media (max-width: ${props => props.theme.breakpoints.m}) {
+  //   -webkit-clip-path: polygon(100% 0, 0 0, 0 70%, 50% 100%, 100% 70%);
+  //   clip-path: polygon(100% 0, 0 0, 0 70%, 50% 100%, 100% 70%);
+  // }
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     -webkit-clip-path: polygon(100% 0, 0 0, 0 70%, 50% 85%, 100% 70%);
     clip-path: polygon(100% 0, 0 0, 0 70%, 50% 85%, 100% 70%);
   }
   background: ${props => props.theme.gradient.rightToLeft};
   object-fit: cover;
-  height: 450px;
+  height: 60vh;
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
+    height: 45vh;
+  }
   @media (max-width: ${props => props.theme.breakpoints.m}) {
     height: 300px;
   }
